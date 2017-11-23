@@ -6,7 +6,16 @@ Save test.py file to the folder which the2.py is saved
 
 # Usage
 cd to folder which the2.py and test.py is saved
-run command: python test.py (Or python2 test.py in some cases)
+
+Then run command: 
+```
+python test.py 
+```
+Or
+```
+python2 test.py 
+```
+in some cases
 
 # Additional Information
 Some tests can be disabled, and some additional information can be displayed or ignored. Those options can be changed by editing test.py. Information needed to change settings can be found inside test.py, and in comments
