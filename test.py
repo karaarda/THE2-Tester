@@ -1,12 +1,4 @@
-#  ____ ____ ____ ____ ____ ____ _________ ____ ____ ____ ____ _________ ____ ____ ____ ____
-# ||I |||n |||s |||e |||r |||t |||       |||C |||o |||d |||e |||       |||H |||e |||r |||e ||
-# ||__|||__|||__|||__|||__|||__|||_______|||__|||__|||__|||__|||_______|||__|||__|||__|||__||
-# |/__\|/__\|/__\|/__\|/__\|/__\|/_______\|/__\|/__\|/__\|/__\|/_______\|/__\|/__\|/__\|/__\|
-
-
-def minority_shape_intersect(first_minority_shape, second_minority_shape):
-    return ()
-
+import the2
 
 #   *   )             )
 # ` )  /(   (      ( /( (          (  (
@@ -24,7 +16,7 @@ tests = []
 
 # Test X (On the instruction PDF)
 
-text_x_calculations = minority_shape_intersect(
+text_x_calculations = the2.minority_shape_intersect(
     [(4., 8.), (20.6, 10.), (9.4, 18.1)],
     [(12.5, 7.), (18.7, 16.2), (2., 12.), (12.5, 11.3)]
 )
@@ -46,7 +38,7 @@ tests.append(test_x)
 
 # Test Uber Basic
 
-test_uber_basic_calculations = minority_shape_intersect(
+test_uber_basic_calculations = the2.minority_shape_intersect(
     [(-6, 6), (0, 6), (0, -6), (-6, -6)],
     [(-2, -2), (-2, 2), (0, 0)]
 )
