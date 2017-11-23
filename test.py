@@ -72,6 +72,8 @@ if len(wantedTests) == 0 or wantedTests.find("Uber Basic") < 0:
 
 # Right below this comment
 
+# Tests in honour of Arda Kara
+
 # Triangle Intersection Test Set
 
 # One Point In
@@ -155,6 +157,8 @@ test_triangle_COMMONCORNER_results = [(6.,6.)]
 test_triangle_COMMONCORNER = ("Triangle Intersection with Only One Common Corner", test_triangle_COMMONCORNER_results, test_triangle_COMMONCORNER_calculations)
 
 tests.append(test_triangle_COMMONCORNER)
+
+# End Of Arda Kara
 
 # Ok thats enough
 
