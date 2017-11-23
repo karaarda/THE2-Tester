@@ -185,7 +185,12 @@ if len(wantedTests) == 0 or wantedTests.find("Common Corner") < 0:
 
 
 import datetime
+
+total_start_time = datetime.datetime.now()
+
 print ""
+
+failed_post_count = 0
 
 for test in tests:
 
@@ -232,8 +237,13 @@ for test in tests:
     finish_time = datetime.datetime.now()
 
     if is_failed:
-        print "Test", name, "failed. (In " + str((finish_time - start_time).total_seconds() * 1000) + " milliseconds)"
+        failed_post_count = failed_post_count + 1
+        print "(!) Test", name, "failed. (In " + str((finish_time - start_time).total_seconds() * 1000) + " milliseconds)"
     else:
-        print "Test", name, "passed. (In " + str((finish_time - start_time).total_seconds() * 1000) + " milliseconds)"
+        print "(~) Test", name, "passed. (In " + str((finish_time - start_time).total_seconds() * 1000) + " milliseconds)"
 
     print ""
+
+total_finish_time = datetime.datetime.now()
+
+print "--- Tested", len(tests), "conditions,", failed_post_count, "failed", len(tests) - failed_post_count, "passed. (In " + str((total_finish_time - total_start_time).total_seconds() * 1000) + " milliseconds) ---"
