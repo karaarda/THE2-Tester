@@ -3,6 +3,7 @@
 # ||__|||__|||__|||__|||__|||__|||_______|||__|||__|||__|||__|||_______|||__|||__|||__|||__||
 # |/__\|/__\|/__\|/__\|/__\|/__\|/_______\|/__\|/__\|/__\|/__\|/_______\|/__\|/__\|/__\|/__\|
 
+# DON'T FORGET TO CHANGE the2.minority_shape_intersect TO minority_shape_intersect IF YOU DONT USE IMPORT !!!
 
 # def minority_shape_intersect(first_minority_shape, second_minority_shape):
 #     return ()
