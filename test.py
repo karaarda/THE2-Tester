@@ -22,12 +22,17 @@ import the2
 #   |_|  \___|/__/ \__| |_||_||_| \__, |
 #                                 |___/
 
-
+# Set SENSITIVITY
 SENSITIVITY = 0.001
+
+# Create Empty Test List
 tests = []
 
 # This means run all tests. You can specify which tests to run by setting this to ["X", "Uber Basic"] etc.
 wantedTests = []
+
+# Whether to show calculated input or not
+show_calculated_input = True
 
 # Test X (On the instruction PDF)
 if len(wantedTests) == 0 or wantedTests.find("X") < 0:
@@ -92,6 +97,9 @@ for test in tests:
 
     print "Test", name
     print "-" * 30
+
+    if show_calculated_input:
+        print "(@) Calculations:", calculations
 
     if results_length != calculations_length:
         print "(!) Failed: Correct results has", results_length, "items, but calculations has", calculations_length
