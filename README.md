@@ -11,11 +11,10 @@ Then run command:
 ```
 python test.py 
 ```
-Or
+Or (in some cases)
 ```
 python2 test.py 
 ```
-in some cases
 
 # Additional Information
 Some tests can be disabled, and some additional information can be displayed or ignored. Those options can be changed by editing test.py. Information needed to change settings can be found inside test.py, and in comments
