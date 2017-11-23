@@ -203,17 +203,17 @@ for test in tests:
 
     is_failed = False
 
-    print "Test", name
+    print " Test", name
     print "-" * 30
 
     if show_calculated_input:
-        print "(@) Calculations:", calculations
+        print "\t(@) Calculations:", calculations
 
     if results_length != calculations_length:
-        print "(!) Failed: Correct results has", results_length, "items, but calculations has", calculations_length
+        print "\t(!) Failed: Correct results has", results_length, "items, but calculations has", calculations_length
         is_failed = True
     else:
-        print "(~) Passed: Correct results has", results_length, "items, calculations also has", calculations_length
+        print "\t(~) Passed: Correct results has", results_length, "items, calculations also has", calculations_length
 
     print ""
 
@@ -227,9 +227,9 @@ for test in tests:
                 break
 
         if is_calculated:
-            print "(~) Passed:", result
+            print "\t(~) Passed:", result
         else:
-            print "(!) Failed:", result
+            print "\t(!) Failed:", result
             is_failed = True
 
     print ""
@@ -238,9 +238,9 @@ for test in tests:
 
     if is_failed:
         failed_post_count = failed_post_count + 1
-        print "(!) Test", name, "failed. (In " + str((finish_time - start_time).total_seconds() * 1000) + " milliseconds)"
+        print "\t(!) Test", name, "failed. (In " + str((finish_time - start_time).total_seconds() * 1000) + " milliseconds)"
     else:
-        print "(~) Test", name, "passed. (In " + str((finish_time - start_time).total_seconds() * 1000) + " milliseconds)"
+        print "\t(~) Test", name, "passed. (In " + str((finish_time - start_time).total_seconds() * 1000) + " milliseconds)"
 
     print ""
 
