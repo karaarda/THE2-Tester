@@ -59,6 +59,89 @@ tests.append(test_uber_basic)
 
 # Right below this comment
 
+# Triangle Intersection Test Set
+
+# One Point In
+test_triangle_ONEPOINTIN_calculations = the2.minority_shape_intersect(
+    [(1.1,6.9),(2.8,4.3),(5.3,8.2)],
+    [(3.,7.),(5.9,4.),(8.,7.1)]
+)
+
+test_triangle_ONEPOINTIN_results = [
+    (3.920414673046252, 6.047846889952153), 
+    (4.550649350649351, 7.031012987012987), 
+    (3.0, 7.0)
+]
+
+test_triangle_ONEPOINTIN = ("Triangle Intersection with One Point Inside", test_triangle_ONEPOINTIN_results, test_triangle_ONEPOINTIN_calculations)
+
+tests.append(test_triangle_ONEPOINTIN)
+
+# Two Point In
+test_triangle_TWOPOINTIN_calculations = the2.minority_shape_intersect(
+    [(0.1,0.1),(0.5,0.1),(0.1,1.0)],
+    [(0.2,0.5),(0.3,0.3),(0.3,1.0)]
+)
+
+test_triangle_TWOPOINTIN_results = [
+    (0.3, 0.5500000000000002), 
+    (0.23793103448275862, 0.6896551724137931), 
+    (0.2, 0.5), 
+    (0.3, 0.3)
+]
+
+test_triangle_TWOPOINTIN = ("Triangle Intersection with Two Points Inside", test_triangle_TWOPOINTIN_results, test_triangle_TWOPOINTIN_calculations)
+
+tests.append(test_triangle_TWOPOINTIN)
+
+# Whole Inside
+test_triangle_WHOLEINSIDE_calculations = the2.minority_shape_intersect(
+    [(6.,6.),(9.,1.),(12.,6.)],
+    [(8.,5.),(8.,4.),(9.,3.)]
+)
+
+test_triangle_WHOLEINSIDE_results = [(8.,5.),(8.,4.),(9.,3.)]
+
+test_triangle_WHOLEINSIDE = ("Triangle Intersesection with one in another", test_triangle_WHOLEINSIDE_results, test_triangle_WHOLEINSIDE_calculations)
+
+tests.append(test_triangle_WHOLEINSIDE)
+
+# Adjacent Edge
+test_triangle_WHOLEINSIDE_calculations = the2.minority_shape_intersect(
+    [(6.,6.),(9.,1.),(12.,6.)],
+    [(6.,6.),(12.,6.),(6.,10.)]
+)
+
+test_triangle_WHOLEINSIDE_results = [(6.,6.),(12.,6.)]
+
+test_triangle_WHOLEINSIDE = ("Triangle Intersection with an Adjacent Edge", test_triangle_WHOLEINSIDE_results, test_triangle_WHOLEINSIDE_calculations)
+
+tests.append(test_triangle_WHOLEINSIDE)
+
+# Point on Edge
+test_triangle_POINTONEDGE_calculations = the2.minority_shape_intersect(
+    [(6.,6.),(9.,1.),(12.,6.)],
+    [(7.,6.),(8.,8.),(4.,8.)]
+)
+
+test_triangle_POINTONEDGE_results = [(7.,6.)]
+
+test_triangle_POINTONEDGE = ("Triangle Intersection with One Corner on Edge of the Other", test_triangle_POINTONEDGE_results, test_triangle_POINTONEDGE_calculations)
+
+tests.append(test_triangle_POINTONEDGE)
+
+
+# Common Corner
+test_triangle_COMMONCORNER_calculations = the2.minority_shape_intersect(
+    [(6.,6.),(9.,1.),(12.,6.)],
+    [(6.,6.),(8.,8.),(4.,8.)]
+)
+
+test_triangle_COMMONCORNER_results = [(6.,6.)]
+
+test_triangle_COMMONCORNER = ("Triangle Intersection with Only One Common Corner", test_triangle_COMMONCORNER_results, test_triangle_COMMONCORNER_calculations)
+
+tests.append(test_triangle_COMMONCORNER)
 
 # Ok thats enough
 
@@ -78,6 +161,8 @@ for test in tests:
 
     print "Test", name
     print "-" * 30
+
+    print "Input", calculations
 
     if results_length != calculations_length:
         print "(!) Failed: Correct results has", results_length, "items, but calculations has", calculations_length
