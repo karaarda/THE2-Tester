@@ -33,6 +33,7 @@ wantedTests = []
 
 # Whether to show calculated input or not
 show_calculated_input = True
+show_only_failed_tests = True
 
 ### Example Tests ###
 
@@ -203,19 +204,21 @@ for test in tests:
 
     is_failed = False
 
-    print "Test", name
-    print "-" * 30
+    output = ""
+
+    output += "Test" + " " +  name + "\n"
+    output += "-" * 30
 
     if show_calculated_input:
-        print "(@) Calculations:", calculations
+        output += "(@) Calculations:" + " " + str(calculations) + "\n"
 
     if results_length != calculations_length:
-        print "(!) Failed: Correct results has", results_length, "items, but calculations has", calculations_length
+        output += "(!) Failed: Correct results has" + " " + str(results_length) + " " + "items, but calculations has" + " " + str(calculations_length) + "\n"
         is_failed = True
     else:
-        print "(~) Passed: Correct results has", results_length, "items, calculations also has", calculations_length
+        output += "(~) Passed: Correct results has" + " " + str(results_length) + " " + "items, calculations also has" + " " + str(calculations_length) + "\n"
 
-    print ""
+    print "\n"
 
     for result in results:
 
@@ -227,22 +230,28 @@ for test in tests:
                 break
 
         if is_calculated:
-            print "(~) Passed:", result
+            output += "(~) Passed:" + " " + str(result) + "\n"
         else:
-            print "(!) Failed:", result
+            output += "(!) Failed:" + " " + str(result) + "\n"
             is_failed = True
 
-    print ""
+    output += "\n"
 
     finish_time = datetime.datetime.now()
 
     if is_failed:
         failed_post_count = failed_post_count + 1
-        print "(!) Test", name, "failed. (In " + str((finish_time - start_time).total_seconds() * 1000) + " milliseconds)"
+        output += "(!) Test" + " " + name + " " + "failed. (In " + str((finish_time - start_time).total_seconds() * 1000) + " milliseconds)" + "\n"
     else:
-        print "(~) Test", name, "passed. (In " + str((finish_time - start_time).total_seconds() * 1000) + " milliseconds)"
+        output += "(~) Test" + " " + name + " " + "passed. (In " + str((finish_time - start_time).total_seconds() * 1000) + " milliseconds)" + "\n"
 
-    print ""
+    output += "\n"
+
+    if show_only_failed_tests:
+        if is_failed:
+            print output
+    else:
+        print output
 
 total_finish_time = datetime.datetime.now()
 
