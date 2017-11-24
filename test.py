@@ -28,17 +28,33 @@ SENSITIVITY = 0.001
 # Create Empty Test List
 tests = []
 
+### Options ###
+
 # This means run all tests. You can specify which tests to run by setting this to ["X", "Uber Basic"] etc.
 wantedTests = []
 
 # Whether to show calculated input or not
 show_calculated_input = True
 
+# Whether to show shapes used in the test or not
+show_minority_shapes = True
+
+# Whether to show only fails or whole test result
+show_only_fails = False
+
+### Options ###
+
 ### Example Tests ###
 
 # Test X (On the instruction PDF)
 if len(wantedTests) == 0 or wantedTests.find("X") < 0:
-    text_x_calculations = the2.minority_shape_intersect(
+
+    test_x_shapes = (
+        [(4., 8.), (20.6, 10.), (9.4, 18.1)],
+        [(12.5, 7.), (18.7, 16.2), (2., 12.), (12.5, 11.3)]
+    )
+
+    test_x_calculations = the2.minority_shape_intersect(
         [(4., 8.), (20.6, 10.), (9.4, 18.1)],
         [(12.5, 7.), (18.7, 16.2), (2., 12.), (12.5, 11.3)]
     )
@@ -53,12 +69,23 @@ if len(wantedTests) == 0 or wantedTests.find("X") < 0:
         (5.996175908221797, 11.733588272785214)
     ]
 
-    test_x = ("X", test_x_results, text_x_calculations)
+    test_x = (
+        "X",
+        test_x_results,
+        test_x_calculations,
+        test_x_shapes
+    )
 
     tests.append(test_x)
 
 # Test Uber Basic
 if len(wantedTests) == 0 or wantedTests.find("Uber Basic") < 0:
+
+    test_uber_basic_shapes = (
+        [(-6, 6), (0, 6), (0, -6), (-6, -6)],
+        [(-2, -2), (-2, 2), (0, 0)]
+    )
+
     test_uber_basic_calculations = the2.minority_shape_intersect(
         [(-6, 6), (0, 6), (0, -6), (-6, -6)],
         [(-2, -2), (-2, 2), (0, 0)]
@@ -70,8 +97,12 @@ if len(wantedTests) == 0 or wantedTests.find("Uber Basic") < 0:
         (0, 0)
     ]
 
-    test_uber_basic = ("Uber Basic", test_uber_basic_results,
-                       test_uber_basic_calculations)
+    test_uber_basic = (
+        "Uber Basic",
+        test_uber_basic_results,
+        test_uber_basic_calculations,
+        test_uber_basic_shapes
+    )
 
     tests.append(test_uber_basic)
 
@@ -81,6 +112,11 @@ if len(wantedTests) == 0 or wantedTests.find("Uber Basic") < 0:
 
 # Test One Point In
 if len(wantedTests) == 0 or wantedTests.find("One Point In") < 0:
+
+    test_triangle_ONEPOINTIN_shapes = (
+        [(1.1, 6.9), (2.8, 4.3), (5.3, 8.2)],
+        [(3., 7.), (5.9, 4.), (8., 7.1)]
+    )
 
     test_triangle_ONEPOINTIN_calculations = the2.minority_shape_intersect(
         [(1.1, 6.9), (2.8, 4.3), (5.3, 8.2)],
@@ -93,13 +129,22 @@ if len(wantedTests) == 0 or wantedTests.find("One Point In") < 0:
         (3.0, 7.0)
     ]
 
-    test_triangle_ONEPOINTIN = ("One Point In",
-                                test_triangle_ONEPOINTIN_results, test_triangle_ONEPOINTIN_calculations)
+    test_triangle_ONEPOINTIN = (
+        "One Point In",
+        test_triangle_ONEPOINTIN_results, test_triangle_ONEPOINTIN_calculations,
+        test_triangle_ONEPOINTIN_shapes
+    )
 
     tests.append(test_triangle_ONEPOINTIN)
 
 # Test Two Point In
 if len(wantedTests) == 0 or wantedTests.find("Two Point In") < 0:
+
+    test_triangle_TWOPOINTIN_shapes = (
+        [(0.1, 0.1), (0.5, 0.1), (0.1, 1.0)],
+        [(0.2, 0.5), (0.3, 0.3), (0.3, 1.0)]
+    )
+
     test_triangle_TWOPOINTIN_calculations = the2.minority_shape_intersect(
         [(0.1, 0.1), (0.5, 0.1), (0.1, 1.0)],
         [(0.2, 0.5), (0.3, 0.3), (0.3, 1.0)]
@@ -112,64 +157,114 @@ if len(wantedTests) == 0 or wantedTests.find("Two Point In") < 0:
         (0.3, 0.3)
     ]
 
-    test_triangle_TWOPOINTIN = ("Two Point In",
-                                test_triangle_TWOPOINTIN_results, test_triangle_TWOPOINTIN_calculations)
+    test_triangle_TWOPOINTIN = (
+        "Two Point In",
+        test_triangle_TWOPOINTIN_results, test_triangle_TWOPOINTIN_calculations,
+        test_triangle_TWOPOINTIN_shapes
+    )
 
     tests.append(test_triangle_TWOPOINTIN)
 
 # Test Whole Inside
 if len(wantedTests) == 0 or wantedTests.find("Whole Inside") < 0:
+
+    test_triangle_WHOLEINSIDE_shapes = (
+        [(6., 6.), (9., 1.), (12., 6.)],
+        [(8., 5.), (8., 4.), (9., 3.)]
+    )
+
     test_triangle_WHOLEINSIDE_calculations = the2.minority_shape_intersect(
         [(6., 6.), (9., 1.), (12., 6.)],
         [(8., 5.), (8., 4.), (9., 3.)]
     )
 
-    test_triangle_WHOLEINSIDE_results = [(8., 5.), (8., 4.), (9., 3.)]
+    test_triangle_WHOLEINSIDE_results = [
+        (8., 5.),
+        (8., 4.),
+        (9., 3.)
+    ]
 
-    test_triangle_WHOLEINSIDE = ("Whole Inside",
-                                 test_triangle_WHOLEINSIDE_results, test_triangle_WHOLEINSIDE_calculations)
+    test_triangle_WHOLEINSIDE = (
+        "Whole Inside",
+        test_triangle_WHOLEINSIDE_results, test_triangle_WHOLEINSIDE_calculations,
+        test_triangle_WHOLEINSIDE_shapes
+    )
 
     tests.append(test_triangle_WHOLEINSIDE)
 
 # Test Adjacent Edge
 if len(wantedTests) == 0 or wantedTests.find("Adjacent Edge") < 0:
-    test_triangle_WHOLEINSIDE_calculations = the2.minority_shape_intersect(
+
+    test_triangle_ADJACENTEDGE_shapes = (
         [(6., 6.), (9., 1.), (12., 6.)],
         [(6., 6.), (12., 6.), (6., 10.)]
     )
 
-    test_triangle_WHOLEINSIDE_results = [(6., 6.), (12., 6.)]
+    test_triangle_ADJACENTEDGE_calculations = the2.minority_shape_intersect(
+        [(6., 6.), (9., 1.), (12., 6.)],
+        [(6., 6.), (12., 6.), (6., 10.)]
+    )
 
-    test_triangle_WHOLEINSIDE = ("Adjacent Edge",
-                                 test_triangle_WHOLEINSIDE_results, test_triangle_WHOLEINSIDE_calculations)
+    test_triangle_ADJACENTEDGE_results = [
+        (6., 6.),
+        (12., 6.)
+    ]
 
-    tests.append(test_triangle_WHOLEINSIDE)
+    test_triangle_ADJACENTEDGE = (
+        "Adjacent Edge",
+        test_triangle_ADJACENTEDGE_results, test_triangle_ADJACENTEDGE_calculations,
+        test_triangle_ADJACENTEDGE_shapes
+    )
+
+    tests.append(test_triangle_ADJACENTEDGE)
 
 # Test Point on Edge
 if len(wantedTests) == 0 or wantedTests.find("Point on Edge") < 0:
+
+    test_triangle_POINTONEDGE_SHAPES = (
+        [(6., 6.), (9., 1.), (12., 6.)],
+        [(7., 6.), (8., 8.), (4., 8.)]
+    )
+
     test_triangle_POINTONEDGE_calculations = the2.minority_shape_intersect(
         [(6., 6.), (9., 1.), (12., 6.)],
         [(7., 6.), (8., 8.), (4., 8.)]
     )
 
-    test_triangle_POINTONEDGE_results = [(7., 6.)]
+    test_triangle_POINTONEDGE_results = [
+        (7., 6.)
+    ]
 
-    test_triangle_POINTONEDGE = ("Point on Edge",
-                                 test_triangle_POINTONEDGE_results, test_triangle_POINTONEDGE_calculations)
+    test_triangle_POINTONEDGE = (
+        "Point on Edge",
+        test_triangle_POINTONEDGE_results, test_triangle_POINTONEDGE_calculations,
+        test_triangle_POINTONEDGE_SHAPES
+    )
 
     tests.append(test_triangle_POINTONEDGE)
 
 # Test Common Corner
 if len(wantedTests) == 0 or wantedTests.find("Common Corner") < 0:
+
+    test_triangle_COMMONCORNER_shapes = (
+        [(6., 6.), (9., 1.), (12., 6.)],
+        [(6., 6.), (8., 8.), (4., 8.)]
+    )
+
     test_triangle_COMMONCORNER_calculations = the2.minority_shape_intersect(
         [(6., 6.), (9., 1.), (12., 6.)],
         [(6., 6.), (8., 8.), (4., 8.)]
     )
 
-    test_triangle_COMMONCORNER_results = [(6., 6.)]
+    test_triangle_COMMONCORNER_results = [
+        (6., 6.)
+    ]
 
-    test_triangle_COMMONCORNER = ("Common Corner",
-                                  test_triangle_COMMONCORNER_results, test_triangle_COMMONCORNER_calculations)
+    test_triangle_COMMONCORNER = (
+        "Common Corner",
+        test_triangle_COMMONCORNER_results, test_triangle_COMMONCORNER_calculations,
+        test_triangle_COMMONCORNER_shapes
+    )
 
     tests.append(test_triangle_COMMONCORNER)
 
@@ -188,34 +283,41 @@ import datetime
 
 total_start_time = datetime.datetime.now()
 
-print ""
-
 failed_post_count = 0
 
 for test in tests:
 
     start_time = datetime.datetime.now()
 
-    name, results, calculations = test
+    willBePrintedResult = "\n"
+
+    name, results, calculations, shapes = test
 
     results_length = len(results)
     calculations_length = len(calculations)
 
     is_failed = False
 
-    print " Test", name
-    print "-" * 30
+    willBePrintedResult += " Test " + name + "\n"
+    willBePrintedResult += "-" * 30 + "\n"
+
+    if show_minority_shapes:
+        willBePrintedResult += "\t(@) First Shape: " + str(shapes[0]) + "\n"
+        willBePrintedResult += "\t(@) Second Shape: " + str(shapes[1]) + "\n\n"
 
     if show_calculated_input:
-        print "\t(@) Calculations:", calculations
+        willBePrintedResult += "\t(@) Calculations: " + \
+            str(calculations) + "\n\n"
 
     if results_length != calculations_length:
-        print "\t(!) Failed: Correct results has", results_length, "items, but calculations has", calculations_length
+        willBePrintedResult += "\t(!) Failed: Correct results has " + str(
+            results_length) + " items, but calculations has " + str(calculations_length)
         is_failed = True
     else:
-        print "\t(~) Passed: Correct results has", results_length, "items, calculations also has", calculations_length
+        willBePrintedResult += "\t(~) Passed: Correct results has " + str(
+            results_length) + " items, calculations also has " + str(calculations_length)
 
-    print ""
+    willBePrintedResult += "\n\n"
 
     for result in results:
 
@@ -227,22 +329,32 @@ for test in tests:
                 break
 
         if is_calculated:
-            print "\t(~) Passed:", result
+            willBePrintedResult += "\t(~) Passed: " + str(result)
         else:
-            print "\t(!) Failed:", result
+            willBePrintedResult += "\t(!) Failed: " + str(result)
             is_failed = True
+        willBePrintedResult += "\n"
 
-    print ""
+    willBePrintedResult += "\n"
 
     finish_time = datetime.datetime.now()
 
     if is_failed:
         failed_post_count = failed_post_count + 1
-        print "\t(!) Test", name, "failed. (In " + str((finish_time - start_time).total_seconds() * 1000) + " milliseconds)"
-    else:
-        print "\t(~) Test", name, "passed. (In " + str((finish_time - start_time).total_seconds() * 1000) + " milliseconds)"
+        willBePrintedResult += "\t(!) Test " + name + " failed. (In " + str(
+            (finish_time - start_time).total_seconds() * 1000) + " milliseconds)"
 
-    print ""
+    else:
+        willBePrintedResult += "\t(~) Test " + name + " passed. (In " + str(
+            (finish_time - start_time).total_seconds() * 1000) + " milliseconds)"
+
+    willBePrintedResult += "\n"
+
+    if show_only_fails:
+        if is_failed:
+            print willBePrintedResult
+    else:
+        print willBePrintedResult
 
 total_finish_time = datetime.datetime.now()
 
