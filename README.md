@@ -18,13 +18,13 @@ python2 test.py
 
 # Options
 Options can be changed by two way:
-- By changing directly from the source file ((Which is described in the Additional Information section))
+- By changing directly from the source file (Which is described in the Additional Information section)
 - By passing cli arguments. (Which will be described in this section)
 
 ## There are 3 CLI option right now
-- By default, whole test log will be shown (Both fails and passes). This can be disabled using: -fo or --fails-only
-- By default, minority shapes used in test will be shown. This can be disabled using:  -nms or --no-minority-shapes
-- By default, calculations from your function will be shown. This can be disabled using:  -nci or --no-calculated-input
+- -fo or --fails-only : By default, whole test log will be shown (Both fails and passes). If this argument is passed only fails will be shown
+- -nms or --no-minority-shapes : By default, minority shapes used in test will be shown. If this argument is passed minority shapes that are used in the test will not be shown 
+- -nci or --no-calculated-input : By default, calculations from your function will be shown. If this argument is passed calculations from your function will not be shown 
 
 Example usage with cli options
 ```
