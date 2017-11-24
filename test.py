@@ -34,7 +34,12 @@ import sys
 ### Options ###
 
 # This means run all tests. You can specify which tests to run by setting this to ["X", "Uber Basic"] etc.
-wantedTests = []
+wanted_tests = []
+
+# This means run all tests. You can specify which tests to not run by setting this to ["X", "Uber Basic"] etc.
+# Eg. If "X" is specified, every test other than X will run
+# !!! This is overwirtes wanted_tests and has more POWER !!!
+unwanted_tests = []
 
 # Whether to show calculated input or not
 show_calculated_input = True
@@ -62,8 +67,11 @@ if "-nci" in sys.argv or "--no-calculated-input" in sys.argv:
 
 ### Example Tests ###
 
+wanted_tests_length = len(wanted_tests)
+unwanted_tests_length = len(unwanted_tests)
+
 # Test X (On the instruction PDF)
-if len(wantedTests) == 0 or wantedTests.find("X") < 0:
+if ((wanted_tests_length == 0 or "X" in wanted_tests) and ("X" not in unwanted_tests)):
 
     test_x_shapes = (
         [(4., 8.), (20.6, 10.), (9.4, 18.1)],
@@ -95,7 +103,7 @@ if len(wantedTests) == 0 or wantedTests.find("X") < 0:
     tests.append(test_x)
 
 # Test Uber Basic
-if len(wantedTests) == 0 or wantedTests.find("Uber Basic") < 0:
+if ((wanted_tests_length == 0 or "Uber Basic" in wanted_tests) and ("Uber Basic" not in unwanted_tests)):
 
     test_uber_basic_shapes = (
         [(-6, 6), (0, 6), (0, -6), (-6, -6)],
@@ -127,7 +135,7 @@ if len(wantedTests) == 0 or wantedTests.find("Uber Basic") < 0:
 ### Tests in honour of Arda Kara ###
 
 # Test One Point In
-if len(wantedTests) == 0 or wantedTests.find("One Point In") < 0:
+if ((wanted_tests_length == 0 or "One Point In" in wanted_tests) and ("One Point In" not in unwanted_tests)):
 
     test_triangle_ONEPOINTIN_shapes = (
         [(1.1, 6.9), (2.8, 4.3), (5.3, 8.2)],
@@ -154,7 +162,7 @@ if len(wantedTests) == 0 or wantedTests.find("One Point In") < 0:
     tests.append(test_triangle_ONEPOINTIN)
 
 # Test Two Point In
-if len(wantedTests) == 0 or wantedTests.find("Two Point In") < 0:
+if ((wanted_tests_length == 0 or "Two Point In" in wanted_tests) and ("Two Point In" not in unwanted_tests)):
 
     test_triangle_TWOPOINTIN_shapes = (
         [(0.1, 0.1), (0.5, 0.1), (0.1, 1.0)],
@@ -182,7 +190,7 @@ if len(wantedTests) == 0 or wantedTests.find("Two Point In") < 0:
     tests.append(test_triangle_TWOPOINTIN)
 
 # Test Whole Inside
-if len(wantedTests) == 0 or wantedTests.find("Whole Inside") < 0:
+if ((wanted_tests_length == 0 or "Whole Inside" in wanted_tests) and ("Whole Inside" not in unwanted_tests)):
 
     test_triangle_WHOLEINSIDE_shapes = (
         [(6., 6.), (9., 1.), (12., 6.)],
@@ -209,7 +217,7 @@ if len(wantedTests) == 0 or wantedTests.find("Whole Inside") < 0:
     tests.append(test_triangle_WHOLEINSIDE)
 
 # Test Adjacent Edge
-if len(wantedTests) == 0 or wantedTests.find("Adjacent Edge") < 0:
+if ((wanted_tests_length == 0 or "Adjacent Edge" in wanted_tests) and ("Adjacent Edge" not in unwanted_tests)):
 
     test_triangle_ADJACENTEDGE_shapes = (
         [(6., 6.), (9., 1.), (12., 6.)],
@@ -235,7 +243,7 @@ if len(wantedTests) == 0 or wantedTests.find("Adjacent Edge") < 0:
     tests.append(test_triangle_ADJACENTEDGE)
 
 # Test Point on Edge
-if len(wantedTests) == 0 or wantedTests.find("Point on Edge") < 0:
+if ((wanted_tests_length == 0 or "Point on Edge" in wanted_tests) and ("Point on Edge" not in unwanted_tests)):
 
     test_triangle_POINTONEDGE_SHAPES = (
         [(6., 6.), (9., 1.), (12., 6.)],
@@ -260,7 +268,7 @@ if len(wantedTests) == 0 or wantedTests.find("Point on Edge") < 0:
     tests.append(test_triangle_POINTONEDGE)
 
 # Test Common Corner
-if len(wantedTests) == 0 or wantedTests.find("Common Corner") < 0:
+if ((wanted_tests_length == 0 or "Common Corner" in wanted_tests) and ("Common Corner" not in unwanted_tests)):
 
     test_triangle_COMMONCORNER_shapes = (
         [(6., 6.), (9., 1.), (12., 6.)],
