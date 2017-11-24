@@ -17,7 +17,9 @@ python2 test.py
 ```
 
 # Options
-Options can be changed by two way: By changing directly from the source file or By passing cli arguments. Additional information section describes first way. This section describes the second one.
+Options can be changed by two way:
+- By changing directly from the source file ((Which is described in the Additional Information section))
+- By passing cli arguments. (Which will be described in this section)
 
 ## There are 3 CLI option right now
 - By default, whole test log will be shown (Both fails and passes). This can be disabled using: -fo or --fails-only
