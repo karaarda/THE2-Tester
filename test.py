@@ -28,6 +28,9 @@ SENSITIVITY = 0.001
 # Create Empty Test List
 tests = []
 
+# Import sys to read CLI Arguments
+import sys
+
 ### Options ###
 
 # This means run all tests. You can specify which tests to run by setting this to ["X", "Uber Basic"] etc.
@@ -43,6 +46,19 @@ show_minority_shapes = True
 show_only_fails = False
 
 ### Options ###
+
+### Check CLI arguments to change options ###
+
+if "-fo" in sys.argv or "--fails-only" in sys.argv:
+    show_only_fails = True
+
+if "-nms" in sys.argv or "--no-minority-shapes" in sys.argv:
+    show_minority_shapes = False
+
+if "-nci" in sys.argv or "--no-calculated-input" in sys.argv:
+    show_calculated_input = False
+
+### Check CLI arguments to change options ###
 
 ### Example Tests ###
 
