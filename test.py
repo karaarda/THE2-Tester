@@ -107,13 +107,13 @@ if ((wanted_tests_length == 0 or "X" in wanted_tests) and ("X" not in unwanted_t
 if ((wanted_tests_length == 0 or "Uber Basic" in wanted_tests) and ("Uber Basic" not in unwanted_tests)):
 
     test_uber_basic_shapes = (
-        [(-6, 6), (0, 6), (0, -6), (-6, -6)],
-        [(-2, -2), (-2, 2), (0, 0)]
+        [(0, -6), (0, 6), (-6, 6), (-6, -6)],
+        [(0, 0), (-2, 2), (-2, -2)]
     )
 
     test_uber_basic_calculations = the2.minority_shape_intersect(
-        [(-6, 6), (0, 6), (0, -6), (-6, -6)],
-        [(-2, -2), (-2, 2), (0, 0)]
+        [(0, -6), (0, 6), (-6, 6), (-6, -6)],
+        [(0, 0), (-2, 2), (-2, -2)]
     )
 
     test_uber_basic_results = [
