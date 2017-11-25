@@ -65,10 +65,11 @@ if "-nci" in sys.argv or "--no-calculated-input" in sys.argv:
 
 ### Check CLI arguments to change options ###
 
-### Example Tests ###
-
 wanted_tests_length = len(wanted_tests)
 unwanted_tests_length = len(unwanted_tests)
+
+
+### Example Tests ###
 
 # Test X (On the instruction PDF)
 if ((wanted_tests_length == 0 or "X" in wanted_tests) and ("X" not in unwanted_tests)):
@@ -132,6 +133,7 @@ if ((wanted_tests_length == 0 or "Uber Basic" in wanted_tests) and ("Uber Basic"
 
 ### End Of Example Tests ###
 
+
 ### Tests in honour of Arda Kara ###
 
 # Test One Point In
@@ -155,7 +157,8 @@ if ((wanted_tests_length == 0 or "One Point In" in wanted_tests) and ("One Point
 
     test_triangle_ONEPOINTIN = (
         "One Point In",
-        test_triangle_ONEPOINTIN_results, test_triangle_ONEPOINTIN_calculations,
+        test_triangle_ONEPOINTIN_results,
+        test_triangle_ONEPOINTIN_calculations,
         test_triangle_ONEPOINTIN_shapes
     )
 
@@ -183,7 +186,8 @@ if ((wanted_tests_length == 0 or "Two Point In" in wanted_tests) and ("Two Point
 
     test_triangle_TWOPOINTIN = (
         "Two Point In",
-        test_triangle_TWOPOINTIN_results, test_triangle_TWOPOINTIN_calculations,
+        test_triangle_TWOPOINTIN_results,
+        test_triangle_TWOPOINTIN_calculations,
         test_triangle_TWOPOINTIN_shapes
     )
 
@@ -210,7 +214,8 @@ if ((wanted_tests_length == 0 or "Whole Inside" in wanted_tests) and ("Whole Ins
 
     test_triangle_WHOLEINSIDE = (
         "Whole Inside",
-        test_triangle_WHOLEINSIDE_results, test_triangle_WHOLEINSIDE_calculations,
+        test_triangle_WHOLEINSIDE_results,
+        test_triangle_WHOLEINSIDE_calculations,
         test_triangle_WHOLEINSIDE_shapes
     )
 
@@ -236,7 +241,8 @@ if ((wanted_tests_length == 0 or "Adjacent Edge" in wanted_tests) and ("Adjacent
 
     test_triangle_ADJACENTEDGE = (
         "Adjacent Edge",
-        test_triangle_ADJACENTEDGE_results, test_triangle_ADJACENTEDGE_calculations,
+        test_triangle_ADJACENTEDGE_results,
+        test_triangle_ADJACENTEDGE_calculations,
         test_triangle_ADJACENTEDGE_shapes
     )
 
@@ -261,7 +267,8 @@ if ((wanted_tests_length == 0 or "Point on Edge" in wanted_tests) and ("Point on
 
     test_triangle_POINTONEDGE = (
         "Point on Edge",
-        test_triangle_POINTONEDGE_results, test_triangle_POINTONEDGE_calculations,
+        test_triangle_POINTONEDGE_results,
+        test_triangle_POINTONEDGE_calculations,
         test_triangle_POINTONEDGE_SHAPES
     )
 
@@ -286,13 +293,159 @@ if ((wanted_tests_length == 0 or "Common Corner" in wanted_tests) and ("Common C
 
     test_triangle_COMMONCORNER = (
         "Common Corner",
-        test_triangle_COMMONCORNER_results, test_triangle_COMMONCORNER_calculations,
+        test_triangle_COMMONCORNER_results,
+        test_triangle_COMMONCORNER_calculations,
         test_triangle_COMMONCORNER_shapes
     )
 
     tests.append(test_triangle_COMMONCORNER)
 
 ### End Of Arda Kara ###
+
+
+### Tests in honour of Kursat Vurusan ###
+
+# Test Case 0
+if ((wanted_tests_length == 0 or "Case 0" in wanted_tests) and ("Case 0" not in unwanted_tests)):
+
+    test_Case0_shapes = (
+        [(1, 1), (5, 5), (1, 6)],
+        [(6, 3), (7, 5), (6, 5)]
+    )
+
+    test_Case0_calculations = the2.minority_shape_intersect(
+        [(1, 1), (5, 5), (1, 6)],
+        [(6, 3), (7, 5), (6, 5)]
+    )
+
+    test_Case0_results = [
+    ]
+
+    test_Case0 = (
+        "Case 0",
+        test_Case0_results,
+        test_Case0_calculations,
+        test_Case0_shapes
+    )
+
+    tests.append(test_Case0)
+
+# Test Case 1
+if ((wanted_tests_length == 0 or "Case 1" in wanted_tests) and ("Case 1" not in unwanted_tests)):
+
+    test_Case1_shapes = (
+        [(1, 1), (5, 5), (1, 6)],
+        [(2, 3), (3, 5), (2, 5)]
+    )
+
+    test_Case1_calculations = the2.minority_shape_intersect(
+        [(1, 1), (5, 5), (1, 6)],
+        [(2, 3), (3, 5), (2, 5)]
+    )
+
+    test_Case1_results = [
+        (3, 5),
+        (2, 5),
+        (2, 3)
+    ]
+
+    test_Case1 = (
+        "Case 1",
+        test_Case1_results,
+        test_Case1_calculations,
+        test_Case1_shapes
+    )
+
+    tests.append(test_Case1)
+
+# Test Case 2
+if ((wanted_tests_length == 0 or "Case 2" in wanted_tests) and ("Case 2" not in unwanted_tests)):
+
+    test_Case2_shapes = (
+        [(1.0, 1.0), (5.0, 5.0), (1.0, 6.0)],
+        [(6.0, 3.0), (7.0, 5.0), (2.0, 4.0)]
+    )
+
+    test_Case2_calculations = the2.minority_shape_intersect(
+        [(1.0, 1.0), (5.0, 5.0), (1.0, 6.0)],
+        [(6.0, 3.0), (7.0, 5.0), (2.0, 4.0)]
+    )
+
+    test_Case2_results = [
+        (4.5, 4.5),
+        (3.6, 3.6),
+        (2.0, 4.0)
+    ]
+
+    test_Case2 = (
+        "Case 2",
+        test_Case2_results,
+        test_Case2_calculations,
+        test_Case2_shapes
+    )
+
+    tests.append(test_Case2)
+
+# Test Case 3
+if ((wanted_tests_length == 0 or "Case 3" in wanted_tests) and ("Case 3" not in unwanted_tests)):
+
+    test_Case3_shapes = (
+        [(1.0, 1.0), (5.0, 4.0), (1.0, 6.0)],
+        [(6.0, 3.0), (7.0, 5.0), (2.0, 4.0)]
+    )
+
+    test_Case3_calculations = the2.minority_shape_intersect(
+        [(1.0, 1.0), (5.0, 4.0), (1.0, 6.0)],
+        [(6.0, 3.0), (7.0, 5.0), (2.0, 4.0)]
+    )
+
+    test_Case3_results = [
+        (4.25, 3.4375),
+        (4.142857142857143, 4.428571428571429),
+        (2.0, 4.0),
+        (5.0, 4.0)
+    ]
+
+    test_Case3 = (
+        "Case 3",
+        test_Case3_results,
+        test_Case3_calculations,
+        test_Case3_shapes
+    )
+
+    tests.append(test_Case3)
+
+# Test Case 4
+if ((wanted_tests_length == 0 or "Case 4" in wanted_tests) and ("Case 4" not in unwanted_tests)):
+
+    test_Case4_shapes = (
+        [(1.0, 1.0), (5.0, 4.0), (1.0, 6.0)],
+        [(2.0, 2.0), (7.0, 5.0), (2.0, 4.0)]
+    )
+
+    test_Case4_calculations = the2.minority_shape_intersect(
+        [(1.0, 1.0), (5.0, 4.0), (1.0, 6.0)],
+        [(2.0, 2.0), (7.0, 5.0), (2.0, 4.0)]
+    )
+
+    test_Case4_results = [
+        (3.6666666666666665, 3.0),
+        (4.142857142857143, 4.428571428571429),
+        (2.0, 2.0),
+        (2.0, 4.0),
+        (5.0, 4.0)
+    ]
+
+    test_Case4 = (
+        "Case 4",
+        test_Case4_results,
+        test_Case4_calculations,
+        test_Case4_shapes
+    )
+
+    tests.append(test_Case4)
+
+### End Of Kursat Vurusan ###
 
 
 # Insert your own cool named test here
