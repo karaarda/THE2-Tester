@@ -620,31 +620,6 @@ if ((wanted_tests_length == 0 or "Case 30" in wanted_tests) and ("Case 30" not i
 
     tests.append(test_Case30)
 
-# Test Case 31
-if ((wanted_tests_length == 0 or "Case 31" in wanted_tests) and ("Case 31" not in unwanted_tests)):
-
-    test_Case31_shapes = (
-        [(-6, 5), (4, 5), (4, 15), (-6, 15)],
-        [(10, 15), (10, 25), (-4.1, 25), (-4.1, 15)]
-    )
-
-    test_Case31_calculations = the2.minority_shape_intersect(
-        [(-6, 5), (4, 5), (4, 15), (-6, 15)],
-        [(10, 15), (10, 25), (-4.1, 25), (-4.1, 15)]
-    )
-
-    test_Case31_results = [
-    ]
-
-    test_Case31 = (
-        "Case 31",
-        test_Case31_results,
-        test_Case31_calculations,
-        test_Case31_shapes
-    )
-
-    tests.append(test_Case31)
-
 # Test Case 32
 if ((wanted_tests_length == 0 or "Case 32" in wanted_tests) and ("Case 32" not in unwanted_tests)):
 
