@@ -445,6 +445,437 @@ if ((wanted_tests_length == 0 or "Case 4" in wanted_tests) and ("Case 4" not in 
 
     tests.append(test_Case4)
 
+# Test Case 20
+if ((wanted_tests_length == 0 or "Case 20" in wanted_tests) and ("Case 20" not in unwanted_tests)):
+
+    test_Case20_shapes = (
+        [(-4, -4), (6, 2), (6, 8), (-4, 4)],
+        [(2, 2), (4, 10), (-2, 10)]
+    )
+
+    test_Case20_calculations = the2.minority_shape_intersect(
+        [(-4, -4), (6, 2), (6, 8), (-4, 4)],
+        [(2, 2), (4, 10), (-2, 10)]
+    )
+
+    test_Case20_results = [
+        (3.2222222222222223, 6.888888888888889),
+        (0.16666666666666666, 5.666666666666667),
+        (2, 2)
+    ]
+
+    test_Case20 = (
+        "Case 20",
+        test_Case20_results,
+        test_Case20_calculations,
+        test_Case20_shapes
+    )
+
+    tests.append(test_Case20)
+
+# Test Case 21
+if ((wanted_tests_length == 0 or "Case 21" in wanted_tests) and ("Case 21" not in unwanted_tests)):
+
+    test_Case21_shapes = (
+        [(-4, -4), (6, 2), (2, 8), (-4, 4)],
+        [(2, 2), (4, 10), (-2, 10)]
+    )
+
+    test_Case21_calculations = the2.minority_shape_intersect(
+        [(-4, -4), (6, 2), (2, 8), (-4, 4)],
+        [(2, 2), (4, 10), (-2, 10)]
+    )
+
+    test_Case21_results = [
+        (3.090909090909091, 6.363636363636363),
+        (-0.25, 6.5),
+        (2, 8),
+        (2, 2)
+    ]
+
+    test_Case21 = (
+        "Case 21",
+        test_Case21_results,
+        test_Case21_calculations,
+        test_Case21_shapes
+    )
+
+    tests.append(test_Case21)
+
+# Test Case 22
+if ((wanted_tests_length == 0 or "Case 22" in wanted_tests) and ("Case 22" not in unwanted_tests)):
+
+    test_Case22_shapes = (
+        [(-4, -4), (6, 2), (2, 8), (-4, 4)],
+        [(12, -10), (10, 10), (-8, -5)]
+    )
+
+    test_Case22_calculations = the2.minority_shape_intersect(
+        [(-4, -4), (6, 2), (2, 8), (-4, 4)],
+        [(12, -10), (10, 10), (-8, -5)]
+    )
+
+    test_Case22_results = [
+        (4.0, 5.0),
+        (-4.0, -1.6666666666666667),
+        (-4, -4),
+        (6, 2)
+    ]
+
+    test_Case22 = (
+        "Case 22",
+        test_Case22_results,
+        test_Case22_calculations,
+        test_Case22_shapes
+    )
+
+    tests.append(test_Case22)
+
+# Test Case 23
+if ((wanted_tests_length == 0 or "Case 23" in wanted_tests) and ("Case 23" not in unwanted_tests)):
+
+    test_Case23_shapes = (
+        [(-4, -4), (8, -15), (4, -5), (4, 10)],
+        [(12, -10), (10, 10), (-8, -5)]
+    )
+
+    test_Case23_calculations = the2.minority_shape_intersect(
+        [(-4, -4), (8, -15), (4, -5), (4, 10)],
+        [(12, -10), (10, 10), (-8, -5)]
+    )
+
+    test_Case23_results = [
+        (4.0, 5.0),
+        (-1.4545454545454546, 0.45454545454545453),
+        (-1.0, - 6.75),
+        (5.333333333333333, -8.333333333333334),
+        (-4, -4),
+        (4, -5)
+    ]
+
+    test_Case23 = (
+        "Case 23",
+        test_Case23_results,
+        test_Case23_calculations,
+        test_Case23_shapes
+    )
+
+    tests.append(test_Case23)
+
+# Test Case 24
+if ((wanted_tests_length == 0 or "Case 24" in wanted_tests) and ("Case 24" not in unwanted_tests)):
+
+    test_Case24_shapes = (
+        [(-4, -4), (6, -7.1), (4, -5), (6, 0)],
+        [(12, -10), (10, 10), (-8, -5)]
+    )
+
+    test_Case24_calculations = the2.minority_shape_intersect(
+        [(-4, -4), (6, -7.1), (4, -5), (6, 0)],
+        [(12, -10), (10, 10), (-8, -5)]
+    )
+
+    test_Case24_results = [
+        (-4, -4),
+        (6, -7.1),
+        (4, -5),
+        (6, 0)
+    ]
+
+    test_Case24 = (
+        "Case 24",
+        test_Case24_results,
+        test_Case24_calculations,
+        test_Case24_shapes
+    )
+
+    tests.append(test_Case24)
+
+# Test Case 30
+if ((wanted_tests_length == 0 or "Case 30" in wanted_tests) and ("Case 30" not in unwanted_tests)):
+
+    test_Case30_shapes = (
+        [(-6, 5), (4, 5), (4, 15), (-6, 15)],
+        [(-4, 10), (10, 10), (10, 20), (-4, 20)]
+    )
+
+    test_Case30_calculations = the2.minority_shape_intersect(
+        [(-6, 5), (4, 5), (4, 15), (-6, 15)],
+        [(-4, 10), (10, 10), (10, 20), (-4, 20)]
+    )
+
+    test_Case30_results = [
+        (4.0, 10.0),
+        (-4.0, 15.0),
+        (-4, 10),
+        (4, 15)
+    ]
+
+    test_Case30 = (
+        "Case 30",
+        test_Case30_results,
+        test_Case30_calculations,
+        test_Case30_shapes
+    )
+
+    tests.append(test_Case30)
+
+# Test Case 31
+if ((wanted_tests_length == 0 or "Case 31" in wanted_tests) and ("Case 31" not in unwanted_tests)):
+
+    test_Case31_shapes = (
+        [(-6, 5), (4, 5), (4, 15), (-6, 15)],
+        [(10, 15), (10, 25), (-4.1, 25), (-4.1, 15)]
+    )
+
+    test_Case31_calculations = the2.minority_shape_intersect(
+        [(-6, 5), (4, 5), (4, 15), (-6, 15)],
+        [(10, 15), (10, 25), (-4.1, 25), (-4.1, 15)]
+    )
+
+    test_Case31_results = [
+    ]
+
+    test_Case31 = (
+        "Case 31",
+        test_Case31_results,
+        test_Case31_calculations,
+        test_Case31_shapes
+    )
+
+    tests.append(test_Case31)
+
+# Test Case 32
+if ((wanted_tests_length == 0 or "Case 32" in wanted_tests) and ("Case 32" not in unwanted_tests)):
+
+    test_Case32_shapes = (
+        [(7.9, 22.3), (-2.1, 22.3), (-2.1, 17.3), (7.9, 17.3)],
+        [(10, 15), (10, 25), (-4.1, 25), (-4.1, 15)]
+    )
+
+    test_Case32_calculations = the2.minority_shape_intersect(
+        [(7.9, 22.3), (-2.1, 22.3), (-2.1, 17.3), (7.9, 17.3)],
+        [(10, 15), (10, 25), (-4.1, 25), (-4.1, 15)]
+    )
+
+    test_Case32_results = [
+        (7.9, 22.3),
+        (-2.1, 22.3),
+        (-2.1, 17.3),
+        (7.9, 17.3)
+    ]
+
+    test_Case32 = (
+        "Case 32",
+        test_Case32_results,
+        test_Case32_calculations,
+        test_Case32_shapes
+    )
+
+    tests.append(test_Case32)
+
+# Test Case 33
+if ((wanted_tests_length == 0 or "Case 33" in wanted_tests) and ("Case 33" not in unwanted_tests)):
+
+    test_Case33_shapes = (
+        [(7.9, 22.3), (-2.1, 22.3), (-2.1, 17.3), (7.9, 17.3)],
+        [(6.0, 5.0), (10, 25), (-4.1, 25), (5.4, 19.9)]
+    )
+
+    test_Case33_calculations = the2.minority_shape_intersect(
+        [(7.9, 22.3), (-2.1, 22.3), (-2.1, 17.3), (7.9, 17.3)],
+        [(6.0, 5.0), (10, 25), (-4.1, 25), (5.4, 19.9)]
+    )
+
+    test_Case33_results = [
+        (0.9294117647058838, 22.3),
+        (5.504697986577181, 17.299999999999997),
+        (5.4, 19.9),
+        (7.9, 22.3),
+        (7.9, 17.3)
+    ]
+
+    test_Case33 = (
+        "Case 33",
+        test_Case33_results,
+        test_Case33_calculations,
+        test_Case33_shapes
+    )
+
+    tests.append(test_Case33)
+
+# Test Case 34
+if ((wanted_tests_length == 0 or "Case 34" in wanted_tests) and ("Case 34" not in unwanted_tests)):
+
+    test_Case34_shapes = (
+        [(-10, 20), (15, 35), (-10.3, 36.1), (-5.0, 30.0)],
+        [(5, 15), (5, 25), (15, 25), (2, 32.5)]
+    )
+
+    test_Case34_calculations = the2.minority_shape_intersect(
+        [(-10, 20), (15, 35), (-10.3, 36.1), (-5.0, 30.0)],
+        [(5, 15), (5, 25), (15, 25), (2, 32.5)]
+    )
+
+    test_Case34_results = [
+        (6.503267973856209, 29.901960784313726),
+        (2.8238341968911915, 27.694300518134714),
+        (2, 32.5)
+    ]
+
+    test_Case34 = (
+        "Case 34",
+        test_Case34_results,
+        test_Case34_calculations,
+        test_Case34_shapes
+    )
+
+    tests.append(test_Case34)
+
+# Test Case 35
+if ((wanted_tests_length == 0 or "Case 35" in wanted_tests) and ("Case 35" not in unwanted_tests)):
+
+    test_Case35_shapes = (
+        [(-10, 20), (15, 35), (-10.3, 36.1), (-5.0, 30.0)],
+        [(5, 15), (5, 25), (15, 25), (-5.0, 45.0)]
+    )
+
+    test_Case35_calculations = the2.minority_shape_intersect(
+        [(-10, 20), (15, 35), (-10.3, 36.1), (-5.0, 30.0)],
+        [(5, 15), (5, 25), (15, 25), (-5.0, 45.0)]
+    )
+
+    test_Case35_results = [
+        (8.75, 31.25),
+        (1.1111111111111112, 26.666666666666668),
+        (4.545454545454546, 35.45454545454545),
+        (-1.911764705882353, 35.73529411764706)
+    ]
+
+    test_Case35 = (
+        "Case 35",
+        test_Case35_results,
+        test_Case35_calculations,
+        test_Case35_shapes
+    )
+
+    tests.append(test_Case35)
+
+# Test Case 36
+if ((wanted_tests_length == 0 or "Case 36" in wanted_tests) and ("Case 36" not in unwanted_tests)):
+
+    test_Case36_shapes = (
+        [(-10, 20), (15, 35), (-10.3, 36.1), (-5.0, 30.0)],
+        [(5, 15), (5, 25), (15, 25), (-5.0, 30.0)]
+    )
+
+    test_Case36_calculations = the2.minority_shape_intersect(
+        [(-10, 20), (15, 35), (-10.3, 36.1), (-5.0, 30.0)],
+        [(5, 15), (5, 25), (15, 25), (-5.0, 30.0)]
+    )
+
+    test_Case36_results = [
+        (3.235294117647059, 27.941176470588236),
+        (-1.6666666666666667, 25.0),
+        (-5.0, 30.0)
+    ]
+
+    test_Case36 = (
+        "Case 36",
+        test_Case36_results,
+        test_Case36_calculations,
+        test_Case36_shapes
+    )
+
+    tests.append(test_Case36)
+
+# Test Case 37
+if ((wanted_tests_length == 0 or "Case 37" in wanted_tests) and ("Case 37" not in unwanted_tests)):
+
+    test_Case37_shapes = (
+        [(-30, 10), (33.5, 37.4), (-20, 50), (-10, 30)],
+        [(50, 60), (5.6, 33.3), (50, 20), (40, 40)]
+    )
+
+    test_Case37_calculations = the2.minority_shape_intersect(
+        [(-30, 10), (33.5, 37.4), (-20, 50), (-10, 30)],
+        [(50, 60), (5.6, 33.3), (50, 20), (40, 40)]
+    )
+
+    test_Case37_results = [
+        (16.459432053602182, 30.047062019979524),
+        (18.350965093642007, 40.967810090095526),
+        (5.6, 33.3),
+        (33.5, 37.4)
+    ]
+
+    test_Case37 = (
+        "Case 37",
+        test_Case37_results,
+        test_Case37_calculations,
+        test_Case37_shapes
+    )
+
+    tests.append(test_Case37)
+
+# Test Case 38
+if ((wanted_tests_length == 0 or "Case 38" in wanted_tests) and ("Case 38" not in unwanted_tests)):
+
+    test_Case38_shapes = (
+        [(-30, 10), (33.5, 37.4), (-20, 50), (-10, 30)],
+        [(50, 60), (5.6, 33.3), (50, 20), (100, 40)]
+    )
+
+    test_Case38_calculations = the2.minority_shape_intersect(
+        [(-30, 10), (33.5, 37.4), (-20, 50), (-10, 30)],
+        [(50, 60), (5.6, 33.3), (50, 20), (100, 40)]
+    )
+
+    test_Case38_results = [
+        (16.459432053602182, 30.047062019979524),
+        (18.350965093642007, 40.967810090095526),
+        (5.6, 33.3),
+        (33.5, 37.4)
+    ]
+
+    test_Case38 = (
+        "Case 38",
+        test_Case38_results,
+        test_Case38_calculations,
+        test_Case38_shapes
+    )
+
+    tests.append(test_Case38)
+
+# Test Case 39
+if ((wanted_tests_length == 0 or "Case 39" in wanted_tests) and ("Case 39" not in unwanted_tests)):
+
+    test_Case39_shapes = (
+        [(-30, 10), (33.5, 37.4), (-20, 50), (-62, 30)],
+        [(50, 60), (5.6, 33.3), (50, 20), (100, 40)]
+    )
+
+    test_Case39_calculations = the2.minority_shape_intersect(
+        [(-30, 10), (33.5, 37.4), (-20, 50), (-62, 30)],
+        [(50, 60), (5.6, 33.3), (50, 20), (100, 40)]
+    )
+
+    test_Case39_results = [
+        (16.459432053602182, 30.047062019979524),
+        (18.350965093642007, 40.967810090095526),
+        (5.6, 33.3),
+        (33.5, 37.4)
+    ]
+
+    test_Case39 = (
+        "Case 39",
+        test_Case39_results,
+        test_Case39_calculations,
+        test_Case39_shapes
+    )
+
+    tests.append(test_Case39)
+
 ### End Of Kursat Vurusan ###
 
 
