@@ -107,19 +107,19 @@ if ((wanted_tests_length == 0 or "X" in wanted_tests) and ("X" not in unwanted_t
 if ((wanted_tests_length == 0 or "Uber Basic" in wanted_tests) and ("Uber Basic" not in unwanted_tests)):
 
     test_uber_basic_shapes = (
-        [(0, -6), (0, 6), (-6, 6), (-6, -6)],
-        [(0, 0), (-2, 2), (-2, -2)]
+        [(0., -6.), (0., 6.), (-6., 6.), (-6., -6.)],
+        [(0., 0.), (-2., 2.), (-2., -2.)]
     )
 
     test_uber_basic_calculations = the2.minority_shape_intersect(
-        [(0, -6), (0, 6), (-6, 6), (-6, -6)],
-        [(0, 0), (-2, 2), (-2, -2)]
+        [(0., -6.), (0., 6.), (-6., 6.), (-6., -6.)],
+        [(0., 0.), (-2., 2.), (-2., -2.)]
     )
 
     test_uber_basic_results = [
-        (-2, -2),
-        (-2, 2),
-        (0, 0)
+        (-2., -2.),
+        (-2., 2.),
+        (0., 0.)
     ]
 
     test_uber_basic = (
@@ -230,13 +230,13 @@ if ((wanted_tests_length == 0 or "Whole Inside" in wanted_tests) and ("Whole Ins
 if ((wanted_tests_length == 0 or "Case 0" in wanted_tests) and ("Case 0" not in unwanted_tests)):
 
     test_Case0_shapes = (
-        [(1, 1), (5, 5), (1, 6)],
-        [(6, 3), (7, 5), (6, 5)]
+        [(1., 1.), (5., 5.), (1., 6.)],
+        [(6., 3.), (7., 5.), (6., 5.)]
     )
 
     test_Case0_calculations = the2.minority_shape_intersect(
-        [(1, 1), (5, 5), (1, 6)],
-        [(6, 3), (7, 5), (6, 5)]
+        [(1., 1.), (5., 5.), (1., 6.)],
+        [(6., 3.), (7., 5.), (6., 5.)]
     )
 
     test_Case0_results = [
@@ -255,19 +255,19 @@ if ((wanted_tests_length == 0 or "Case 0" in wanted_tests) and ("Case 0" not in 
 if ((wanted_tests_length == 0 or "Case 1" in wanted_tests) and ("Case 1" not in unwanted_tests)):
 
     test_Case1_shapes = (
-        [(1, 1), (5, 5), (1, 6)],
-        [(2, 3), (3, 5), (2, 5)]
+        [(1., 1.), (5., 5.), (1., 6.)],
+        [(2., 3.), (3., 5.), (2., 5.)]
     )
 
     test_Case1_calculations = the2.minority_shape_intersect(
-        [(1, 1), (5, 5), (1, 6)],
-        [(2, 3), (3, 5), (2, 5)]
+        [(1., 1.), (5., 5.), (1., 6.)],
+        [(2., 3.), (3., 5.), (2., 5.)]
     )
 
     test_Case1_results = [
-        (3, 5),
-        (2, 5),
-        (2, 3)
+        (3., 5.),
+        (2., 5.),
+        (2., 3.)
     ]
 
     test_Case1 = (
@@ -370,19 +370,19 @@ if ((wanted_tests_length == 0 or "Case 4" in wanted_tests) and ("Case 4" not in 
 if ((wanted_tests_length == 0 or "Case 20" in wanted_tests) and ("Case 20" not in unwanted_tests)):
 
     test_Case20_shapes = (
-        [(-4, -4), (6, 2), (6, 8), (-4, 4)],
-        [(2, 2), (4, 10), (-2, 10)]
+        [(-4., -4.), (6., 2.), (6., 8.), (-4., 4.)],
+        [(2., 2.), (4., 10.), (-2., 10.)]
     )
 
     test_Case20_calculations = the2.minority_shape_intersect(
-        [(-4, -4), (6, 2), (6, 8), (-4, 4)],
-        [(2, 2), (4, 10), (-2, 10)]
+        [(-4., -4.), (6., 2.), (6., 8.), (-4., 4.)],
+        [(2., 2.), (4., 10.), (-2., 10.)]
     )
 
     test_Case20_results = [
         (3.2222222222222223, 6.888888888888889),
         (0.16666666666666666, 5.666666666666667),
-        (2, 2)
+        (2., 2.)
     ]
 
     test_Case20 = (
@@ -398,20 +398,20 @@ if ((wanted_tests_length == 0 or "Case 20" in wanted_tests) and ("Case 20" not i
 if ((wanted_tests_length == 0 or "Case 21" in wanted_tests) and ("Case 21" not in unwanted_tests)):
 
     test_Case21_shapes = (
-        [(-4, -4), (6, 2), (2, 8), (-4, 4)],
-        [(2, 2), (4, 10), (-2, 10)]
+        [(-4., -4.), (6., 2.), (2., 8.), (-4., 4.)],
+        [(2., 2.), (4., 10.), (-2., 10.)]
     )
 
     test_Case21_calculations = the2.minority_shape_intersect(
-        [(-4, -4), (6, 2), (2, 8), (-4, 4)],
-        [(2, 2), (4, 10), (-2, 10)]
+        [(-4., -4.), (6., 2.), (2., 8.), (-4., 4.)],
+        [(2., 2.), (4., 10.), (-2., 10.)]
     )
 
     test_Case21_results = [
         (3.090909090909091, 6.363636363636363),
         (-0.25, 6.5),
-        (2, 8),
-        (2, 2)
+        (2., 8.),
+        (2., 2.)
     ]
 
     test_Case21 = (
@@ -427,20 +427,20 @@ if ((wanted_tests_length == 0 or "Case 21" in wanted_tests) and ("Case 21" not i
 if ((wanted_tests_length == 0 or "Case 22" in wanted_tests) and ("Case 22" not in unwanted_tests)):
 
     test_Case22_shapes = (
-        [(-4, -4), (6, 2), (2, 8), (-4, 4)],
-        [(12, -10), (10, 10), (-8, -5)]
+        [(-4., -4.), (6., 2.), (2., 8.), (-4., 4.)],
+        [(12., -10.), (10., 10.), (-8., -5.)]
     )
 
     test_Case22_calculations = the2.minority_shape_intersect(
-        [(-4, -4), (6, 2), (2, 8), (-4, 4)],
-        [(12, -10), (10, 10), (-8, -5)]
+        [(-4., -4.), (6., 2.), (2., 8.), (-4., 4.)],
+        [(12., -10.), (10., 10.), (-8., -5.)]
     )
 
     test_Case22_results = [
         (4.0, 5.0),
         (-4.0, -1.6666666666666667),
-        (-4, -4),
-        (6, 2)
+        (-4., -4.),
+        (6., 2.)
     ]
 
     test_Case22 = (
@@ -456,13 +456,13 @@ if ((wanted_tests_length == 0 or "Case 22" in wanted_tests) and ("Case 22" not i
 if ((wanted_tests_length == 0 or "Case 23" in wanted_tests) and ("Case 23" not in unwanted_tests)):
 
     test_Case23_shapes = (
-        [(-4, -4), (8, -15), (4, -5), (4, 10)],
-        [(12, -10), (10, 10), (-8, -5)]
+        [(-4., -4.), (8., -15.), (4., -5.), (4., 10.)],
+        [(12., -10.), (10., 10.), (-8., -5.)]
     )
 
     test_Case23_calculations = the2.minority_shape_intersect(
-        [(-4, -4), (8, -15), (4, -5), (4, 10)],
-        [(12, -10), (10, 10), (-8, -5)]
+        [(-4., -4.), (8., -15.), (4., -5.), (4., 10.)],
+        [(12., -10.), (10., 10.), (-8., -5.)]
     )
 
     test_Case23_results = [
@@ -470,8 +470,8 @@ if ((wanted_tests_length == 0 or "Case 23" in wanted_tests) and ("Case 23" not i
         (-1.4545454545454546, 0.45454545454545453),
         (-1.0, - 6.75),
         (5.333333333333333, -8.333333333333334),
-        (-4, -4),
-        (4, -5)
+        (-4., -4.),
+        (4., -5.)
     ]
 
     test_Case23 = (
@@ -487,20 +487,20 @@ if ((wanted_tests_length == 0 or "Case 23" in wanted_tests) and ("Case 23" not i
 if ((wanted_tests_length == 0 or "Case 24" in wanted_tests) and ("Case 24" not in unwanted_tests)):
 
     test_Case24_shapes = (
-        [(-4, -4), (6, -7.1), (4, -5), (6, 0)],
-        [(12, -10), (10, 10), (-8, -5)]
+        [(-4., -4.), (6., -7.1), (4., -5.), (6., 0.)],
+        [(12., -10.), (10., 10.), (-8., -5.)]
     )
 
     test_Case24_calculations = the2.minority_shape_intersect(
-        [(-4, -4), (6, -7.1), (4, -5), (6, 0)],
-        [(12, -10), (10, 10), (-8, -5)]
+        [(-4., -4.), (6., -7.1), (4., -5.), (6., 0.)],
+        [(12., -10.), (10., 10.), (-8., -5.)]
     )
 
     test_Case24_results = [
-        (-4, -4),
-        (6, -7.1),
-        (4, -5),
-        (6, 0)
+        (-4., -4.),
+        (6., -7.1),
+        (4., -5.),
+        (6., 0.)
     ]
 
     test_Case24 = (
@@ -516,20 +516,20 @@ if ((wanted_tests_length == 0 or "Case 24" in wanted_tests) and ("Case 24" not i
 if ((wanted_tests_length == 0 or "Case 30" in wanted_tests) and ("Case 30" not in unwanted_tests)):
 
     test_Case30_shapes = (
-        [(-6, 5), (4, 5), (4, 15), (-6, 15)],
-        [(-4, 10), (10, 10), (10, 20), (-4, 20)]
+        [(-6., 5.), (4., 5.), (4., 15.), (-6., 15.)],
+        [(-4., 10.), (10., 10.), (10., 20.), (-4., 20.)]
     )
 
     test_Case30_calculations = the2.minority_shape_intersect(
-        [(-6, 5), (4, 5), (4, 15), (-6, 15)],
-        [(-4, 10), (10, 10), (10, 20), (-4, 20)]
+        [(-6., 5.), (4., 5.), (4., 15.), (-6., 15.)],
+        [(-4., 10.), (10., 10.), (10., 20.), (-4., 20.)]
     )
 
     test_Case30_results = [
         (4.0, 10.0),
         (-4.0, 15.0),
-        (-4, 10),
-        (4, 15)
+        (-4., 10.),
+        (4., 15.)
     ]
 
     test_Case30 = (
@@ -546,12 +546,12 @@ if ((wanted_tests_length == 0 or "Case 32" in wanted_tests) and ("Case 32" not i
 
     test_Case32_shapes = (
         [(7.9, 22.3), (-2.1, 22.3), (-2.1, 17.3), (7.9, 17.3)],
-        [(10, 15), (10, 25), (-4.1, 25), (-4.1, 15)]
+        [(10., 15.), (10., 25.), (-4.1, 25.), (-4.1, 15.)]
     )
 
     test_Case32_calculations = the2.minority_shape_intersect(
         [(7.9, 22.3), (-2.1, 22.3), (-2.1, 17.3), (7.9, 17.3)],
-        [(10, 15), (10, 25), (-4.1, 25), (-4.1, 15)]
+        [(10., 15.), (10., 25.), (-4.1, 25.), (-4.1, 15.)]
     )
 
     test_Case32_results = [
@@ -575,12 +575,12 @@ if ((wanted_tests_length == 0 or "Case 33" in wanted_tests) and ("Case 33" not i
 
     test_Case33_shapes = (
         [(7.9, 22.3), (-2.1, 22.3), (-2.1, 17.3), (7.9, 17.3)],
-        [(6.0, 5.0), (10, 25), (-4.1, 25), (5.4, 19.9)]
+        [(6.0, 5.0), (10., 25.), (-4.1, 25.), (5.4, 19.9)]
     )
 
     test_Case33_calculations = the2.minority_shape_intersect(
         [(7.9, 22.3), (-2.1, 22.3), (-2.1, 17.3), (7.9, 17.3)],
-        [(6.0, 5.0), (10, 25), (-4.1, 25), (5.4, 19.9)]
+        [(6.0, 5.0), (10., 25.), (-4.1, 25.), (5.4, 19.9)]
     )
 
     test_Case33_results = [
@@ -604,13 +604,13 @@ if ((wanted_tests_length == 0 or "Case 33" in wanted_tests) and ("Case 33" not i
 if ((wanted_tests_length == 0 or "Case 34" in wanted_tests) and ("Case 34" not in unwanted_tests)):
 
     test_Case34_shapes = (
-        [(-10, 20), (15, 35), (-10.3, 36.1), (-5.0, 30.0)],
-        [(5, 15), (5, 25), (15, 25), (2, 32.5)]
+        [(-10., 20.), (15., 35.), (-10.3, 36.1), (-5.0, 30.0)],
+        [(5., 15.), (5., 25.), (15., 25.), (2., 32.5)]
     )
 
     test_Case34_calculations = the2.minority_shape_intersect(
-        [(-10, 20), (15, 35), (-10.3, 36.1), (-5.0, 30.0)],
-        [(5, 15), (5, 25), (15, 25), (2, 32.5)]
+        [(-10., 20.), (15., 35.), (-10.3, 36.1), (-5.0, 30.0)],
+        [(5., 15.), (5., 25.), (15., 25.), (2., 32.5)]
     )
 
     test_Case34_results = [
@@ -632,13 +632,13 @@ if ((wanted_tests_length == 0 or "Case 34" in wanted_tests) and ("Case 34" not i
 if ((wanted_tests_length == 0 or "Case 35" in wanted_tests) and ("Case 35" not in unwanted_tests)):
 
     test_Case35_shapes = (
-        [(-10, 20), (15, 35), (-10.3, 36.1), (-5.0, 30.0)],
-        [(5, 15), (5, 25), (15, 25), (-5.0, 45.0)]
+        [(-10., 20.), (15., 35.), (-10.3, 36.1), (-5.0, 30.0)],
+        [(5., 15.), (5., 25.), (15., 25.), (-5.0, 45.0)]
     )
 
     test_Case35_calculations = the2.minority_shape_intersect(
-        [(-10, 20), (15, 35), (-10.3, 36.1), (-5.0, 30.0)],
-        [(5, 15), (5, 25), (15, 25), (-5.0, 45.0)]
+        [(-10., 20.), (15., 35.), (-10.3, 36.1), (-5.0, 30.0)],
+        [(5., 15.), (5., 25.), (15., 25.), (-5.0, 45.0)]
     )
 
     test_Case35_results = [
@@ -661,13 +661,13 @@ if ((wanted_tests_length == 0 or "Case 35" in wanted_tests) and ("Case 35" not i
 if ((wanted_tests_length == 0 or "Case 36" in wanted_tests) and ("Case 36" not in unwanted_tests)):
 
     test_Case36_shapes = (
-        [(-10, 20), (15, 35), (-10.3, 36.1), (-5.0, 30.0)],
-        [(5, 15), (5, 25), (15, 25), (-5.0, 30.0)]
+        [(-10., 20.), (15., 35.), (-10.3, 36.1), (-5.0, 30.0)],
+        [(5., 15.), (5., 25.), (15., 25.), (-5.0, 30.0)]
     )
 
     test_Case36_calculations = the2.minority_shape_intersect(
-        [(-10, 20), (15, 35), (-10.3, 36.1), (-5.0, 30.0)],
-        [(5, 15), (5, 25), (15, 25), (-5.0, 30.0)]
+        [(-10., 20.), (15., 35.), (-10.3, 36.1), (-5.0, 30.0)],
+        [(5., 15.), (5., 25.), (15., 25.), (-5.0, 30.0)]
     )
 
     test_Case36_results = [
@@ -689,13 +689,13 @@ if ((wanted_tests_length == 0 or "Case 36" in wanted_tests) and ("Case 36" not i
 if ((wanted_tests_length == 0 or "Case 37" in wanted_tests) and ("Case 37" not in unwanted_tests)):
 
     test_Case37_shapes = (
-        [(-30, 10), (33.5, 37.4), (-20, 50), (-10, 30)],
-        [(50, 60), (5.6, 33.3), (50, 20), (40, 40)]
+        [(-30., 10.), (33.5, 37.4), (-20., 50.), (-10., 30.)],
+        [(50., 60.), (5.6, 33.3), (50., 20.), (40., 40.)]
     )
 
     test_Case37_calculations = the2.minority_shape_intersect(
-        [(-30, 10), (33.5, 37.4), (-20, 50), (-10, 30)],
-        [(50, 60), (5.6, 33.3), (50, 20), (40, 40)]
+        [(-30., 10.), (33.5, 37.4), (-20., 50.), (-10., 30.)],
+        [(50., 60.), (5.6, 33.3), (50., 20.), (40., 40.)]
     )
 
     test_Case37_results = [
@@ -718,13 +718,13 @@ if ((wanted_tests_length == 0 or "Case 37" in wanted_tests) and ("Case 37" not i
 if ((wanted_tests_length == 0 or "Case 38" in wanted_tests) and ("Case 38" not in unwanted_tests)):
 
     test_Case38_shapes = (
-        [(-30, 10), (33.5, 37.4), (-20, 50), (-10, 30)],
-        [(50, 60), (5.6, 33.3), (50, 20), (100, 40)]
+        [(-30., 10.), (33.5, 37.4), (-20., 50.), (-10., 30.)],
+        [(50., 60.), (5.6, 33.3), (50., 20.), (100., 40.)]
     )
 
     test_Case38_calculations = the2.minority_shape_intersect(
-        [(-30, 10), (33.5, 37.4), (-20, 50), (-10, 30)],
-        [(50, 60), (5.6, 33.3), (50, 20), (100, 40)]
+        [(-30., 10.), (33.5, 37.4), (-20., 50.), (-10., 30.)],
+        [(50., 60.), (5.6, 33.3), (50., 20.), (100., 40.)]
     )
 
     test_Case38_results = [
@@ -747,13 +747,13 @@ if ((wanted_tests_length == 0 or "Case 38" in wanted_tests) and ("Case 38" not i
 if ((wanted_tests_length == 0 or "Case 39" in wanted_tests) and ("Case 39" not in unwanted_tests)):
 
     test_Case39_shapes = (
-        [(-30, 10), (33.5, 37.4), (-20, 50), (-62, 30)],
-        [(50, 60), (5.6, 33.3), (50, 20), (100, 40)]
+        [(-30., 10.), (33.5, 37.4), (-20., 50.), (-62., 30.)],
+        [(50., 60.), (5.6, 33.3), (50., 20.), (100., 40.)]
     )
 
     test_Case39_calculations = the2.minority_shape_intersect(
-        [(-30, 10), (33.5, 37.4), (-20, 50), (-62, 30)],
-        [(50, 60), (5.6, 33.3), (50, 20), (100, 40)]
+        [(-30., 10.), (33.5, 37.4), (-20., 50.), (-62., 30.)],
+        [(50., 60.), (5.6, 33.3), (50., 20.), (100., 40.)]
     )
 
     test_Case39_results = [
