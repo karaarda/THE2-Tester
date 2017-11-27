@@ -83,9 +83,9 @@ if "-uwt" in sys.argv:
 
     index = sys.argv.index("-uwt")
     if not index == len(sys.argv) - 1:
-        wanted_tests = sys.argv[index + 1].split(",")
-    for i in xrange(len(wanted_tests)):
-        wanted_tests[i] = str.strip(wanted_tests[i])
+        unwanted_tests = sys.argv[index + 1].split(",")
+    for i in xrange(len(unwanted_tests)):
+        unwanted_tests[i] = str.strip(unwanted_tests[i])
 
 elif "--unwanted-tests" in sys.argv:
 
