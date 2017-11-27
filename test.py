@@ -57,12 +57,26 @@ show_only_fails = False
 
 if "-fo" in sys.argv or "--fails-only" in sys.argv:
     show_only_fails = True
+    print str(sys.argv)
 
 if "-nms" in sys.argv or "--no-minority-shapes" in sys.argv:
     show_minority_shapes = False
 
 if "-nci" in sys.argv or "--no-calculated-input" in sys.argv:
     show_calculated_input = False
+
+if "-wt" in sys.argv:
+    index = sys.argv.index("-wt")
+    
+    if not index == len(sys.argv)-1:
+        wanted_tests = sys.argv[index + 1].split(",")
+
+elif "--wanted-tests" in sys.argv:
+    index = sys.argv.index("--wanted-tests")
+    
+    if not index == len(sys.argv)-1:
+        wanted_tests = sys.argv[index + 1].split(",")
+
 
 ### Check CLI arguments to change options ###
 
