@@ -255,6 +255,7 @@ if ((wanted_tests_length == 0 or "Whole Inside" in wanted_tests) and ("Whole Ins
 
     tests.append(test_triangle_WHOLEINSIDE)
 
+# Test Common Slope
 if ((wanted_tests_length == 0 or "Common Slope" in wanted_tests) and ("Common Slope" not in unwanted_tests)):
 
     test_triangle_COMMONSLOPE_shapes = (
@@ -269,7 +270,7 @@ if ((wanted_tests_length == 0 or "Common Slope" in wanted_tests) and ("Common Sl
 
     test_triangle_COMMONSLOPE_results = [
         (1., 6.),
-        (11., 6.),
+        (12., 6.),
         (0., 0.)
     ]
 
@@ -282,6 +283,7 @@ if ((wanted_tests_length == 0 or "Common Slope" in wanted_tests) and ("Common Sl
 
     tests.append(test_triangle_COMMONSLOPE)
 
+# Test Shifted Shape
 if ((wanted_tests_length == 0 or "Shifted Shape" in wanted_tests) and ("Shifted Shape" not in unwanted_tests)):
 
     test_triangle_SHIFTEDSHAPE_shapes = (
@@ -308,6 +310,34 @@ if ((wanted_tests_length == 0 or "Shifted Shape" in wanted_tests) and ("Shifted 
     )
 
     tests.append(test_triangle_SHIFTEDSHAPE)
+
+# Test Common Slope 2
+if ((wanted_tests_length == 0 or "Common Slope 2" in wanted_tests) and ("Common Slope 2" not in unwanted_tests)):
+
+    test_triangle_COMMONSLOPE2_shapes = (
+        [(0., 6.), (0., 0.), (12., 0.)],
+        [(0., 6.), (3., 0.), (13., 0.)]
+    )
+
+    test_triangle_COMMONSLOPE2_calculations = the2.minority_shape_intersect(
+        [(0., 6.), (0., 0.), (12., 0.)],
+        [(0., 6.), (3., 0.), (13., 0.)]
+    )
+
+    test_triangle_COMMONSLOPE2_results = [
+        (0., 6.),
+        (3., 0.),
+        (12., 0.)
+    ]
+
+    test_triangle_COMMONSLOPE2 = (
+        "Common Slope 2",
+        test_triangle_COMMONSLOPE2_results,
+        test_triangle_COMMONSLOPE2_calculations,
+        test_triangle_COMMONSLOPE2_shapes
+    )
+
+    tests.append(test_triangle_COMMONSLOPE2)
 
 ### End Of Arda Kara ###
 
