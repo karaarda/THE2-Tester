@@ -63,6 +63,39 @@ if "-nms" in sys.argv or "--no-minority-shapes" in sys.argv:
 if "-nci" in sys.argv or "--no-calculated-input" in sys.argv:
     show_calculated_input = False
 
+if "-wt" in sys.argv:
+
+    index = sys.argv.index("-wt")
+    if not index == len(sys.argv) - 1:
+        wanted_tests = sys.argv[index + 1].split(",")
+    for i in xrange(len(wanted_tests)):
+        wanted_tests[i] = str.strip(wanted_tests[i])
+
+elif "--wanted-tests" in sys.argv:
+
+    index = sys.argv.index("--wanted-tests")
+    if not index == len(sys.argv) - 1:
+        wanted_tests = sys.argv[index + 1].split(",")
+    for i in xrange(len(wanted_tests)):
+        wanted_tests[i] = str.strip(wanted_tests[i])
+
+if "-uwt" in sys.argv:
+
+    index = sys.argv.index("-uwt")
+    if not index == len(sys.argv) - 1:
+        wanted_tests = sys.argv[index + 1].split(",")
+    for i in xrange(len(wanted_tests)):
+        wanted_tests[i] = str.strip(wanted_tests[i])
+
+elif "--unwanted-tests" in sys.argv:
+
+    index = sys.argv.index("--unwanted-tests")
+    if not index == len(sys.argv) - 1:
+        unwanted_tests = sys.argv[index + 1].split(",")
+    for i in xrange(len(unwanted_tests)):
+        unwanted_tests[i] = str.strip(unwanted_tests[i])
+
+
 ### Check CLI arguments to change options ###
 
 wanted_tests_length = len(wanted_tests)
