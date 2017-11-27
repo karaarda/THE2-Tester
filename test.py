@@ -285,13 +285,13 @@ if ((wanted_tests_length == 0 or "Common Slope" in wanted_tests) and ("Common Sl
 if ((wanted_tests_length == 0 or "Shifted Shape" in wanted_tests) and ("Shifted Shape" not in unwanted_tests)):
 
     test_triangle_SHIFTEDSHAPE_shapes = (
-        [(0., 6.), (0., 0.), (12., 6.)],
-        [(1., 6.), (0., 0.), (13., 6.)]
+        [(0., 0.), (5., 5.), (0., 5.)],
+        [(1., 1.), (6., 6.), (1., 6.)]
     )
 
     test_triangle_SHIFTEDSHAPE_calculations = the2.minority_shape_intersect(
-        [(0., 6.), (0., 0.), (12., 6.)],
-        [(1., 6.), (0., 0.), (13., 6.)]
+        [(0., 0.), (5., 5.), (0., 5.)],
+        [(1., 1.), (6., 6.), (1., 6.)]
     )
 
     test_triangle_SHIFTEDSHAPE_results = [
