@@ -254,6 +254,90 @@ if ((wanted_tests_length == 0 or "Whole Inside" in wanted_tests) and ("Whole Ins
 
     tests.append(test_triangle_WHOLEINSIDE)
 
+# Test Common Slope
+if ((wanted_tests_length == 0 or "Common Slope" in wanted_tests) and ("Common Slope" not in unwanted_tests)):
+
+    test_triangle_COMMONSLOPE_shapes = (
+        [(0., 6.), (0., 0.), (12., 6.)],
+        [(1., 6.), (0., 0.), (13., 6.)]
+    )
+
+    test_triangle_COMMONSLOPE_calculations = the2.minority_shape_intersect(
+        [(0., 6.), (0., 0.), (12., 6.)],
+        [(1., 6.), (0., 0.), (13., 6.)]
+    )
+
+    test_triangle_COMMONSLOPE_results = [
+        (1., 6.),
+        (12., 6.),
+        (0., 0.)
+    ]
+
+    test_triangle_COMMONSLOPE = (
+        "Common Slope",
+        test_triangle_COMMONSLOPE_results,
+        test_triangle_COMMONSLOPE_calculations,
+        test_triangle_COMMONSLOPE_shapes
+    )
+
+    tests.append(test_triangle_COMMONSLOPE)
+
+# Test Shifted Shape
+if ((wanted_tests_length == 0 or "Shifted Shape" in wanted_tests) and ("Shifted Shape" not in unwanted_tests)):
+
+    test_triangle_SHIFTEDSHAPE_shapes = (
+        [(0., 0.), (5., 5.), (0., 5.)],
+        [(1., 1.), (6., 6.), (1., 6.)]
+    )
+
+    test_triangle_SHIFTEDSHAPE_calculations = the2.minority_shape_intersect(
+        [(0., 0.), (5., 5.), (0., 5.)],
+        [(1., 1.), (6., 6.), (1., 6.)]
+    )
+
+    test_triangle_SHIFTEDSHAPE_results = [
+        (1., 1.),
+        (5., 5.),
+        (1., 5.)
+    ]
+
+    test_triangle_SHIFTEDSHAPE = (
+        "Common Slope",
+        test_triangle_SHIFTEDSHAPE_results,
+        test_triangle_SHIFTEDSHAPE_calculations,
+        test_triangle_SHIFTEDSHAPE_shapes
+    )
+
+    tests.append(test_triangle_SHIFTEDSHAPE)
+
+# Test Common Slope 2
+if ((wanted_tests_length == 0 or "Common Slope 2" in wanted_tests) and ("Common Slope 2" not in unwanted_tests)):
+
+    test_triangle_COMMONSLOPE2_shapes = (
+        [(0., 6.), (0., 0.), (12., 0.)],
+        [(0., 6.), (3., 0.), (13., 0.)]
+    )
+
+    test_triangle_COMMONSLOPE2_calculations = the2.minority_shape_intersect(
+        [(0., 6.), (0., 0.), (12., 0.)],
+        [(0., 6.), (3., 0.), (13., 0.)]
+    )
+
+    test_triangle_COMMONSLOPE2_results = [
+        (0., 6.),
+        (3., 0.),
+        (12., 0.)
+    ]
+
+    test_triangle_COMMONSLOPE2 = (
+        "Common Slope 2",
+        test_triangle_COMMONSLOPE2_results,
+        test_triangle_COMMONSLOPE2_calculations,
+        test_triangle_COMMONSLOPE2_shapes
+    )
+
+    tests.append(test_triangle_COMMONSLOPE2)
+
 ### End Of Arda Kara ###
 
 
